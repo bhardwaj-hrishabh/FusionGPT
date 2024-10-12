@@ -1,0 +1,22 @@
+import { connect } from "mongoose";
+// import { disconnect } from "process";
+async function connectToDatabase() {
+    try {
+        await connect(process.env.MONGODB_URL);
+    }
+    catch (error) {
+        console.log(error);
+        throw new Error("Cannot Connect to MongoDB");
+    }
+}
+async function disconnectFromDatabase() {
+    try {
+        await process.disconnect();
+    }
+    catch (error) {
+        console.log(error);
+        throw new Error("Cannot Connect to MongoDB");
+    }
+}
+export { connectToDatabase, disconnectFromDatabase };
+//# sourceMappingURL=connection.js.map
