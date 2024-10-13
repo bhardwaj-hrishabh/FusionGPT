@@ -6,19 +6,19 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 // Function to check if the string is a code block
-function isCodeBlock(str: string) {
-    return (
-        str.includes('=') ||
-        str.includes(';') ||
-        str.includes('[') ||
-        str.includes(']') ||
-        str.includes('{') ||
-        str.includes('}') ||
-        str.includes('#') ||
-        str.includes('//') ||
-        str.includes('function')
-    );
-}
+// function isCodeBlock(str: string) {
+//     return (
+//         str.includes('=') ||
+//         str.includes(';') ||
+//         str.includes('[') ||
+//         str.includes(']') ||
+//         str.includes('{') ||
+//         str.includes('}') ||
+//         str.includes('#') ||
+//         str.includes('//') ||
+//         str.includes('function')
+//     );
+// }
 
 function parseMessageWithCode(content: string) {
     const blocks = content.split('```');
